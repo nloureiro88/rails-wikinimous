@@ -1,0 +1,18 @@
+<h2><%= @article.title %></h2>
+
+<div class="article-header">
+  <%= link_to edit_article_path(@article) do %>
+  <i class="fas fa-marker fa-lg"></i>
+  <% end %>
+  <%= link_to article_path(@article), method: :delete do %>
+    <i class="fas fa-trash-alt fa-lg"></i>
+  <% end %>
+</div>
+
+<p><%= @article.content %></p>
+
+<%= link_to articles_path do %>
+  <div class="back">
+    <i class="fas fa-chevron-left fa-lg"></i><span> Back</span>
+  </div>
+<% end  %>
